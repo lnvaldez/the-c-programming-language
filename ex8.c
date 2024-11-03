@@ -6,7 +6,7 @@ and newlines (\n)
 
 int main() {
 
-    int b, t, nl;
+    int c, b, t, nl;
 
     while ((c = getchar()) != EOF) {
         if (c == ' ') {
