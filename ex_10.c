@@ -6,11 +6,11 @@ int main() {
 
     while((c = getchar()) != EOF) {
         if (c == '\t') {
-            c = '\\t';
+            printf("\\t");
         } else if (c == '\b') {
-            c = '\\b';
+            printf("\\b");
         } else if (c == '\\') {
-            c = '\\';
+            printf("\\");
         };
         putchar(c);
     };
