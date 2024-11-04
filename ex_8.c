@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Write a program to count blanks (' '), tabs ('/t),
+/* Exercise 1-8. Write a program to count blanks (' '), tabs ('/t),
 and newlines (\n)
 */
 
