@@ -15,7 +15,7 @@ int main() {
 	
 	while ((c = getchar()) != EOF) {
 
-		if (c == ' ') {
+		if (c == ' ' || c == '\n' || c == '\t') {
 			printf("\n");
 		} else {
 			putchar(c);
