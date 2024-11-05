@@ -8,15 +8,17 @@ histogram with the bars horizontal; a vertical orientation is more challenging. 
 void vertical_histogram()
 {
 	int* ptr;
-	int c, size;
+	int c, i, size;
 	
-	size = 0;
+	// Define length of array
+	size = 5;
 	
 	while((c = getchar()) != EOF)
 	{
 		if (c == ' ' || c == '\n' || c == '\t')
 		{
-			;
+			ptr[i] = size;
+			size = 0;
 		}
 		else
 		{
@@ -29,12 +31,6 @@ void vertical_histogram()
 	for (int j = 0; j < size; ++j)
 	{
 		ptr[j] = j + 1;
-	}
-	
-	printf("The elements of the array are: ");
-	for (int k = 0; k < size; ++k)
-	{
-		printf("%d, ", ptr[k]);
 	}
 	
 }
