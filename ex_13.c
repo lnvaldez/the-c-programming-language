@@ -8,29 +8,34 @@ histogram with the bars horizontal; a vertical orientation is more challenging. 
 void vertical_histogram()
 {
 	int* ptr;
-	int c, i, size;
+	int c, i, length, size;
 	
 	// Define length of array
 	size = 5;
-	
-	while((c = getchar()) != EOF)
-	{
-		if (c == ' ' || c == '\n' || c == '\t')
-		{
-			ptr[i] = size;
-			size = 0;
-		}
-		else
-		{
-			++size;
-		}
-	}
+	// Index
+	i = 0;
 	
 	ptr = (int*)malloc(size * sizeof(int));
 	
+	printf("Write a 5-word sentence\n");
+	
+	while((c = getchar()) != EOF)
+	{
+		if (c == ' ')
+		{
+			ptr[i] = length;
+			length = 0;
+			++i;
+		}
+		else
+		{
+			++length;
+		}
+	}
+	
 	for (int j = 0; j < size; ++j)
 	{
-		ptr[j] = j + 1;
+		printf("%d, ", ptr[j]);
 	}
 	
 }
@@ -39,20 +44,20 @@ void vertical_histogram()
 
 int main()
 {
-	int c;
+	// int c;
 	
-	while((c = getchar()) != EOF )
-	{
-		if (c == ' ' || c == '\n' || c == '\t')
-		{
-			printf("\n");
-		}
-		else
-		{
-			printf("*", c);
-		}
+	// while((c = getchar()) != EOF )
+	// {
+		// if (c == ' ' || c == '\n' || c == '\t')
+		// {
+			// printf("\n");
+		// }
+		// else
+		// {
+			// printf("*", c);
+		// }
 		
-	}
+	// }
 	
 	vertical_histogram();
 	
