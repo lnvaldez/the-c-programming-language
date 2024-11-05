@@ -3,14 +3,10 @@ its input one word per line. */
 
 #include <stdio.h>
 
-#define IN 1
-#define OUT 0
-
 int main() {
 
-	int c, word, state;
+	int c, word;
 	
-	state = OUT;
 	c = word = 0;
 	
 	while ((c = getchar()) != EOF) {
