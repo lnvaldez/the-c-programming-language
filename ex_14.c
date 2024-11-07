@@ -8,15 +8,20 @@ of the frequencies of different characters in its input. */
 int main()
 {
 	
-	int c, i, start;
-	int nchar[SIZE];
-	
-	start = 33;
+	int c, i;
+	int nchar[SIZE]; // Array of size 93
 	
 	for (i = 0; i < SIZE; ++i)
 	{
-		nchar[i] = 0;
+		nchar[i] = 0; // Each element starts at count 0
 	}
+
+	/*
+		If the character is one between '!' and '~',
+		increase it's index value count by one. 
+		The index position equals it's value minus '!' (33).
+		e.g. 'a' (97) - '!' (33) will have an index value of 64
+	*/
 	
 	while((c = getchar()) != EOF)
 	{
@@ -28,10 +33,10 @@ int main()
 	
 	for (i = 0; i < SIZE; ++i)
 	{
-		if (nchar[i] != 0)
+		if (nchar[i] != 0) 
 		{
 			
-			printf("%c: ", (i + start));
+			printf("%c: ", (i + '!'));
 			for (int j = 0; j < nchar[i]; ++j)
 			{
 				printf("*");
