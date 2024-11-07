@@ -31,7 +31,12 @@ int main()
 		if (nchar[i] != 0)
 		{
 			
-			printf("%c", (i + start));
+			printf("%c: ", (i + start));
+			for (int j = 0; j < nchar[i]; ++j)
+			{
+				printf("*");
+			}
+			printf(" (%d)\n", nchar[i]);
 		}
 	}
 
