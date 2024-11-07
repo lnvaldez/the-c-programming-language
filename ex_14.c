@@ -8,9 +8,10 @@ of the frequencies of different characters in its input. */
 int main()
 {
 	
-	int c, i;
+	int c, i, start;
 	int nchar[SIZE];
 	
+	start = 33;
 	
 	for (i = 0; i < SIZE; ++i)
 	{
@@ -30,7 +31,7 @@ int main()
 		if (nchar[i] != 0)
 		{
 			
-			printf("%c", i);
+			printf("%c", (i + start));
 		}
 	}
 
